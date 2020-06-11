@@ -70,7 +70,7 @@ h1 {
 }
 .fadeIn-slow {
   opacity: 1;
-  transition: all 1000ms 0s;
+  transition: all 500ms 1s;
   transition-timing-function: ease-in;
   transform: translateY(-30px);
 }
