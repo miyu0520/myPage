@@ -17,6 +17,7 @@ html, body {
 }
 h1 {
   font-size: 2.5rem;
+  font-weight: 200;
   text-align: center;
   letter-spacing: 0.4rem;
   margin-bottom: 2rem;
@@ -64,6 +65,12 @@ h1 {
 .fadeIn {
   opacity: 1;
   transition: all 500ms 0s;
+  transition-timing-function: ease-in;
+  transform: translateY(-30px);
+}
+.fadeIn-slow {
+  opacity: 1;
+  transition: all 1000ms 0s;
   transition-timing-function: ease-in;
   transform: translateY(-30px);
 }
@@ -226,9 +233,10 @@ nav.globalMenuSp.active {
 }
 .logo p {
   font-size: 1.2rem;
+  font-weight: 200;
   margin-top: 0.9rem;
   letter-spacing: 0.3rem;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 /* hero */
