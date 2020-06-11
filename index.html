@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>miyu</title>
+  <link rel="stylesheet" href="css/destyle.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <script src="js/jquery.inview.min.js"></script>
+</head>
+<body>
+  <!-- loading -->
+  <div id="loading">
+    <img src="/img/loading.svg" alt="miyu">
+  </div>
+
+  <div id="hidden">
+    <header>
+      <div class="nav_sp">
+        <div class="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="globalMenuSp">
+          <ul>
+            <li><a href="#skills" class="
+              link">Skills</a></li>
+            <li><a href="#works" class="link">Works</a></li>
+            <li><a href="#about" class="link">About</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="nav_pc">
+        <nav>
+          <ul>
+            <li>
+              <a href="#skills" class="underline">Skills</a>
+            </li>
+            <li>
+              <a href="#works" class="underline">Works</a>
+            </li>
+            <li>
+              <a href="#about" class="underline">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <main>
+      <section class="hero">
+      <div class="logo">
+        <img src="img/logo.svg" alt="">
+        <p class="logo_text">Web<br>Designer</p>
+      </div>
+      <div id="skills">
+        <div class="inner fadein">
+          <div class="skills__skillsContainer">
+            <div class="skills__skillsContainer__skillBox-1">
+              <img src="img/title1.svg" class="title" alt="">
+              <img src="img/mouse.svg" class="icon" alt="design">
+              <p>Illustrator、Photoshopを用いてデザインを作成いたします。バナー作成もいたします。</p>
+            </div>
+            <div class="skills__skillsContainer__skillBox-2">
+              <img src="img/title2.svg" class="title" alt="">
+              <img src="img/code.svg" class="icon" alt="coding">
+              <p>デザインを元にWebサイトをコーディングいたします。HTML、CSSを中心に、jQueryやJavascriptを利用した動きのあるサイトを作成いたします。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      
+      <section id="works">
+        <div class="fadein">
+          <h1>Works</h1>
+          <div class="works__container">
+            <p>Coming soon...</p>
+          </div>
+        </div>
+      </section>
+      
+      <section id="about">
+        <div class="fadein">
+          <h1>About</h1>
+          <div class="about__container">
+            <img src="img/icon.png" alt="miyu">
+            <div class="about__container__text">
+              <p>横浜市在住。<br>2019年よりweb制作を始める。LP制作やバナー制作を担当。</p>
+              <p>猫好き。コーヒー好き。</p>
+              <p>サイト制作だけでなく、Webサービスの開発に携われるよう、コーディングスキルを向上させています。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <small>Copyright&copy;2020 miyu All rights reserved.</small>
+    </footer>
+  </div>
+
+  <!-- ローディング画面 -->
+    <script>
+      var showloading = document.getElementById('loading');
+      var contents = document.getElementById('hidden');
+
+      window.addEventListener('load', function (){
+        setTimeout("show()", 1500);
+      });
+      function show(){
+        showloading.style.display = 'none';
+        contents.style.display = 'block';
+      };
+    </script>
+    <!-- spナビ -->
+    <script>
+    $(function() {
+        $('.navToggle').click(function() {
+            $(this).toggleClass('active');
+    
+            if ($(this).hasClass('active')) {
+                $('.globalMenuSp').addClass('active');
+                $('body').addClass('overflowHidden');
+                $('main').addClass('filter');
+            } else {
+                $('.globalMenuSp').removeClass('active');
+                $('body').removeClass('overflowHidden');
+                $('main').removeClass('filter');
+            }
+        });
+    });
+    $(function() {
+        $('.link').click(function() {
+          $('.globalMenuSp').removeClass('active');
+          $('main').removeClass('filter');
+          $('.navToggle.active').removeClass('active');
+        });
+    });
+    </script>
+    <!-- フェードイン -->
+    <script>
+      $(function() {
+        $('.fadein').on('inview', function(event, isInView) {
+        if(isInView){
+          $(this).stop().addClass('fadeIn');
+        }
+        else{
+          $(this).stop().removeClass('fadeIn');
+        }
+      });
+      });
+      </script>
+</body>
+</html>
