@@ -239,7 +239,7 @@ nav.globalMenuSp.active {
 /* skills */
 #skills {
   width: 100%;
-  background-image : url(img/background_sp.jpg);
+  background-image : url(../img/background_sp.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -249,7 +249,7 @@ nav.globalMenuSp.active {
 }
 @media(min-width: 768px) {
   #skills {
-    background-image : url(img/background_pc.jpg);
+    background-image : url(../img/background_pc.jpg);
     height: calc(100vh - 28rem);
     
   }
