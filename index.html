@@ -149,9 +149,9 @@
     <script>
       $(window).on('scroll', function () {
         if ($(this).scrollTop() < 30) {
-          $('.fadeon').removeClass('fadeOn');
+          $('.fadeon').fadeOut(300).removeClass('fadeOn');
         } else {
-          $('.fadeon').addClass('fadeOn');
+          $('.fadeon').addClass('fadeOn').fadeIn(700);
         }
       });
       </script>
