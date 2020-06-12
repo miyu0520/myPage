@@ -62,7 +62,7 @@
         <p class="logo_text">Web<br>Designer</p>
       </div>
       <div id="skills">
-        <div class="inner fadein-slow">
+        <div class="inner fadeon">
           <div class="skills__skillsContainer">
             <div class="skills__skillsContainer__skillBox-1">
               <img src="img/title1.svg" class="title" alt="">
@@ -145,19 +145,17 @@
         });
     });
     </script>
-    <!-- フェードイン -->
+    <!-- フェードオン -->
     <script>
-      $(function() {
-        $('.fadein-slow').on('inview', function(event, isInView) {
-        if(isInView){
-          $(this).stop().addClass('fadeIn-slow');
+      $(window).on('scroll', function () {
+        if ($(this).scrollTop() < 30) {
+          $('.fadeon').removeClass('fadeOn');
+        } else {
+          $('.fadeon').addClass('fadeOn');
         }
-        else{
-          $(this).stop().removeClass('fadeIn-slow');
-        }
-      });
       });
       </script>
+    <!-- フェードイン -->
     <script>
       $(function() {
         $('.fadein').on('inview', function(event, isInView) {
@@ -170,5 +168,5 @@
       });
       });
       </script>
-</body>
+  </body>
 </html>
