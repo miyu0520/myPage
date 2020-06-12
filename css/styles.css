@@ -269,12 +269,16 @@ nav.globalMenuSp.active {
 .skills__skillsContainer {
   display: grid;
   grid-gap: 4rem;
+  -ms-grid-gap: 4rem;
   grid-template-rows: 25rem 25rem;
+  -ms-grid-template-rows: 25rem 25rem;
 }
 @media(min-width: 768px) {
   .skills__skillsContainer {
-    grid-template-rows: 100% 0rem;
     grid-template-columns: 50% 50%;
+    -ms-grid-template-columns: 50% 50%;
+    grid-template-rows: 100% 0rem;
+    -ms-grid-template-rows: 100% 0rem;
     width: 70%;
     margin: 0 calc(15% + 2rem) 0 auto;
   }
@@ -309,14 +313,18 @@ nav.globalMenuSp.active {
 @media(min-width: 768px) {
   .skills__skillsContainer__skillBox-1 {
     grid-row: 1;
+    -ms-grid-row: 1;
     grid-column: 1;
+    -ms-grid-column: 1;
     margin: 0;
     width: 100%;
     padding: 1.5rem 2rem;
   }
   .skills__skillsContainer__skillBox-2 {
     grid-row: 1;
+    -ms-grid-row: 1;
     grid-column: 2;
+    -ms-grid-column: 2;
     margin: 0;
     width: 100%;
     padding: 1.5rem 2rem;
